@@ -53,3 +53,8 @@ body {
 .nav-link:active {
 	background-color: #c2bdbd;
 }
+
+#visualIntro{
+	margin-top: 10%;
+	text-align: center;
+}
