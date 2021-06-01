@@ -1,0 +1,3 @@
+- at least half of included html elements must use attributes
+- 10 block level elements
+- 10 inline elements
