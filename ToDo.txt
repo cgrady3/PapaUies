@@ -1,5 +1,5 @@
 - at least half of included html elements must use attributes
-        - charset (meta)
+        x- charset (meta)
         - lang (meta)
         - title (meta)
         - id
@@ -7,25 +7,25 @@
 
 - 10 block level elements
         1- address
-        2- div
+        x2- div
         3- footer
         4- form
         5- h1/h2/h3...
-        6- li
-        7- ul
-        8- nav
-        9- p
-        10- section
+        x6- li
+        x7- ul
+        x8- nav
+        x9- p
+        x10- section
 
 - 10 inline elements
-        1- a
+        x1- a
             - href
         2- b
-        3- br
+        x3- br
         4- button
             - name
             - type
-        5- img
+        x5- img
         6- input/form
             - accept
             - placeholder
@@ -35,6 +35,6 @@
         9- textarea
             - maxlength
             - cols
-        10- iframe
+        x10- iframe
             - autoplay
             - loading="eager"
