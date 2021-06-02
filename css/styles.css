@@ -2,6 +2,14 @@ body {
 	background-color: #303030;
 }
 
+h2{
+	color: #c5c0c0;
+}
+
+h3{
+	font-size: 40px;
+}
+
 footer {
 	position: fixed;
 	left: 0;
@@ -76,6 +84,7 @@ footer {
 #contact{
 	text-align: center;
 	margin: auto;
+	margin-bottom: 5%;
 	color: #c5c0c0;
 }
 
@@ -105,6 +114,7 @@ footer {
 #description{
 	text-align: center;
 	color: #c2bdbd;
+	margin-bottom: 3%;
 }
 
 #indexIntro{
@@ -164,4 +174,18 @@ footer {
 
 .price{
 	margin-right: 3%;
+}
+
+#message{
+	margin: 5% 0;
+	border-radius: 8px;
+}
+
+#subject{
+	border-radius: 8px;
+	width: 300px;
+}
+
+.email{
+	border-radius: 8px;
 }

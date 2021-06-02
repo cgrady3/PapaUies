@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0599685da4.js" crossorigin="anonymous"></script>
+    <!-- W3 validator warns type=ico is bad but its an ico file buton other W3 pages it says type ico is the usual type used to note a favicon -->
     <link rel="icon" type="ico" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -33,6 +35,7 @@
     </div>
 
     <section id="about">
+        <h2>What's-a Papa U-ey's?</h2>
         <p>
             Papa U-ey's is a family owned Orlando based Pizza Styled Food Truck. We offer classic pizza selections,
             made to order topped pizzas, Gluten-Free options, calizones, salads, and specialty deserts.
@@ -62,20 +65,26 @@
                 <td>(321) 645-8790</td>
             </tr>
             <tr>
+
                 <td>Mon - Fri 11a - 11p<br>Sat-Sun 10a-12a</td>
             </tr>
             <tr>
                 <td>
                     <br>
-                    <a href="mailto:papaueys@gmail.com?Subject=Hello" class="contact-link">
-                        <i class="fas fa-envelope-open-text fa-2x"></i>
-                        papaueys@gmail.com
-                    </a>
+                    <form action="mailto:papaueys@gmail.com" method="post" enctype="text/plain">
+                        Send us a message and we'll get back to you within 2 business days
+                        <br>
+                        or email us directly at papaueys@gmail.com
+                        <br>
+                        <br>
+                        <textarea class="email" type="text" name=" " cols="60" rows="8"></textarea><br><br>
+                        <input type="submit" value="Send" class="btn btn-primary">
+                    </form>
                 </td>
-            </tr>
+            </tr>            
         </table>
     </div>
-    <footer>copyright &copy;</footer>
+    <footer>Papa U-ey's &copy;</footer>
 </body>
 
 </html>
