@@ -197,6 +197,8 @@ footer {
 	margin: 20px auto 4%;
 	transform: rotateY(180deg);
 	transition-duration: 4500ms;
+	border-style: solid;
+	border-image: url("../images/border.png");
 }
 
 .mathSign {
