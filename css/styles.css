@@ -142,7 +142,8 @@ footer {
 	justify-content: flex-start;
 	margin-left: 3%;
 	color: #c5c0c0;
-	margin-top: 2%;
+	margin-top: -2%;
+	margin-bottom: 6%;
 }
 
 .menu-item {
@@ -191,10 +192,10 @@ footer {
 }
 
 #pizzas {
-	width: 50%;
-	height: 50%;
-	display: block;
-	margin: 20px auto 4%;
+	width: 25%;
+	height: 25%;
+	display: inline;
+	margin: -240px 0 10%;
 	transform: rotateY(180deg);
 	transition-duration: 4500ms;
 	border-style: solid;
@@ -204,4 +205,31 @@ footer {
 .mathSign {
 	transform: rotate(360deg);
 	transition-duration: 2s;
+}
+
+#form {
+	display: inline-block;
+	margin: 0 30px;
+}
+
+#formTitle{
+	font-family: 'La Belle Aurore', cursive;
+	font-weight: bold;
+	font-size: 45px;
+	color: #c5c0c0;
+	text-align: center;
+	margin: 40px 0 10px;
+}
+
+#orderForm {
+	text-align: center;
+}
+
+.form-check {
+	color: #c5c0c0;
+	text-align: center;
+}
+
+#numPizza {
+	width: 130px;
 }

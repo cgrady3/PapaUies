@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <!-- W3 validator warns type=ico is bad but its an ico file buton other W3 pages it says type ico is the usual type used to note a favicon -->
+    <!-- W3 validator warns type=ico is bad but its an ico file buton other W3 pages it says type ico is the usual type used to note a favicon -->
     <link rel="icon" type="ico" href="../images/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="../javascript/script.js" defer></script>
     <title>Products</title>
 </head>
 
@@ -32,6 +34,73 @@
             </ul>
         </nav>
     </div>
+    <div id="orderForm">
+        <img src="../images/pizzas.jpg" alt="pizzas" id="pizzas">
+
+        <div id="form">
+            <h3 id="formTitle">Place An Order</h3>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputFName" placeholder="First Name*">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputLName" placeholder="Last Name*">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Address*">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputCity" placeholder="City*">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <select id="state*" class="form-control">
+                            <option selected value="">State...</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="TN">TN</option>
+                            <option value="AL">AL</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="text" class="form-control" id="inputZip" placeholder="Zip*">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email*">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number*">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="Personal" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Personal
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="Business">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Business
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="order">Place Order</button>
+            </form>
+        </div>
+
+        <img src="../images/pizzas.jpg" alt="pizzas" id="pizzas">
+    </div>
     <div class="menu-items pizza-section -">
         <div class="menu-item">
             <div class="menu-container">
@@ -39,13 +108,31 @@
                     Quattro Formaggio </h4>
                 <p>aged mozzarella, smoked provolone, romano, shaved asiago</p>
                 <div class="price-container">
-                    <span class="price">
-                        9.59 </span>
-                    <span class="price">
-                        15.99 </span>
-                    <span class="price">
-                        20.19 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="9.59">
+                        <label class="form-check-label" for="inlineCheckbox1">9.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="15.99">
+                        <label class="form-check-label" for="inlineCheckbox1">15.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="20.19">
+                        <label class="form-check-label" for="inlineCheckbox1">20.19</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -55,13 +142,31 @@
                     Veggie Pie </h4>
                 <p>baby portabella mushrooms, green peppers, red onions, black olives, Roma tomatoes</p>
                 <div class="price-container">
-                    <span class="price">
-                        9.59 </span>
-                    <span class="price">
-                        15.99 </span>
-                    <span class="price">
-                        20.19 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="9.59">
+                        <label class="form-check-label" for="inlineCheckbox1">9.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="15.99">
+                        <label class="form-check-label" for="inlineCheckbox1">15.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="20.19">
+                        <label class="form-check-label" for="inlineCheckbox1">20.19</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -71,13 +176,31 @@
                     Deluxe </h4>
                 <p>pepperoni, Italian sausage, green peppers, red onions and baby portabella mushrooms</p>
                 <div class="price-container">
-                    <span class="price">
-                        9.59 </span>
-                    <span class="price">
-                        15.99 </span>
-                    <span class="price">
-                        20.19 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="9.59">
+                        <label class="form-check-label" for="inlineCheckbox1">9.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="15.99">
+                        <label class="form-check-label" for="inlineCheckbox1">15.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="20.19">
+                        <label class="form-check-label" for="inlineCheckbox1">20.19</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -87,13 +210,31 @@
                     Triple Pepperoni </h4>
                 <p>pepperoni, pepperoni — and more pepperoni!</p>
                 <div class="price-container">
-                    <span class="price">
-                        9.59 </span>
-                    <span class="price">
-                        15.99 </span>
-                    <span class="price">
-                        20.19 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="9.59">
+                        <label class="form-check-label" for="inlineCheckbox1">9.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="15.99">
+                        <label class="form-check-label" for="inlineCheckbox1">15.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="20.19">
+                        <label class="form-check-label" for="inlineCheckbox1">20.19</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -103,13 +244,31 @@
                     Papa's All Meat Pie </h4>
                 <p>pepperoni, Italian sausage, smoked bacon, ham and meatballs</p>
                 <div class="price-container">
-                    <span class="price">
-                        10.99 </span>
-                    <span class="price">
-                        18.59 </span>
-                    <span class="price">
-                        22.99 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="10.99">
+                        <label class="form-check-label" for="inlineCheckbox1">10.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="18.59">
+                        <label class="form-check-label" for="inlineCheckbox1">18.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="22.99">
+                        <label class="form-check-label" for="inlineCheckbox1">22.99</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -120,13 +279,31 @@
                 <p>pepperoni, Italian sausage, smoked bacon and ham, baby portabella mushrooms, green peppers, red
                     onions and black olives</p>
                 <div class="price-container">
-                    <span class="price">
-                        10.99 </span>
-                    <span class="price">
-                        18.59 </span>
-                    <span class="price">
-                        22.99 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="10.99">
+                        <label class="form-check-label" for="inlineCheckbox1">10.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="18.59">
+                        <label class="form-check-label" for="inlineCheckbox1">18.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="22.99">
+                        <label class="form-check-label" for="inlineCheckbox1">22.99</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -136,13 +313,31 @@
                     Carne di Italia </h4>
                 <p>Italian sausage, pepperoni, genoa salami, Italian meatballs, prosciutto, fresh basil</p>
                 <div class="price-container">
-                    <span class="price">
-                        10.99 </span>
-                    <span class="price">
-                        18.59 </span>
-                    <span class="price">
-                        22.99 </span>
-
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="10.99">
+                        <label class="form-check-label" for="inlineCheckbox1">10.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="18.59">
+                        <label class="form-check-label" for="inlineCheckbox1">18.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="22.99">
+                        <label class="form-check-label" for="inlineCheckbox1">22.99</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -153,30 +348,36 @@
                 <p>ham and smoked bacon, <br>
                     fresh-cut pineapple</p>
                 <div class="price-container">
-                    <span class="price">
-                        10.99 </span>
-                    <span class="price">
-                        18.59 </span>
-                    <span class="price">
-                        22.99 </span>
-
-                </div>
-            </div>
-        </div>
-        <div class="menu-item">
-            <div class="menu-container">
-                <h4 class="item-title">
-                    Made To Order </h4>
-                <p>your choice of toppings <br>
-                    for a perfectly personalized pie</p>
-                <div class="price-container">
-                    <span class="price">
-                        TBD </span>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="10.99">
+                        <label class="form-check-label" for="inlineCheckbox1">10.99</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="18.59">
+                        <label class="form-check-label" for="inlineCheckbox1">18.59</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="22.99">
+                        <label class="form-check-label" for="inlineCheckbox1">22.99</label>
+                    </div>
+                    <select id="numPizza" class="form-control">
+                        <option selected>How Many?</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
                 </div>
             </div>
         </div>
     </div>
-    <img src="../images/pizzas.jpg" alt="pizzas" id="pizzas">
+
     <footer>Papa U-ey's &copy;</footer>
 </body>
 
